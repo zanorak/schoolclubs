@@ -1,0 +1,13 @@
+
+h1 {
+	color: gray;
+	text-align: center;
+}
+
+.navbar {
+	margin-bottom: 40px;
+}
+
+.card-img-left {
+	width: 30%;
+}

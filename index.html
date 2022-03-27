@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>School Clubs</title>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="clubs.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">School Clubs</a>
+        <button id="addNew" type="button" class="btn btn-primary float-right">Add New Club</button>
+      </div>
+    </nav>
+    
+    <div id="clubs" class="container">
+      <!-- Cards go here -->
+    </div>
+
+    <!-- New Modal -->
+    <div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="newModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newModal">New Club</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="clubName" class="form-label">Club Name</label>
+                <input type="text" class="form-control" id="clubName"/>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="imageFile">Club Image</label>
+                <input type="file" class="form-control" id="imageFile" />
+              </div>
+              
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col">
+                  <label for="presName" class="form-label">President&rsquo;s Name</label>
+                  <input type="text" class="form-control" id="presName"/>
+                </div>            
+
+                <div class="col">
+                  <label for="presEmail" class="form-label">President&rsquo;s Email Address</label>
+                  <input type="email" class="form-control" id="presEmail"/>
+                </div>            
+              </div>
+
+              <div class="row mb-3">
+                <div class="col">
+                  <label for="advisorName" class="form-label">Advisor&rsquo;s Name</label>
+                  <input type="text" class="form-control" id="advisorName"/>
+                </div>            
+
+                <div class="col">
+                  <label for="advisorEmail" class="form-label">Advisor&rsquo;s Email Address</label>
+                  <input type="email" class="form-control" id="advisorEmail"/>
+                </div>            
+              </div>
+
+              <div class="mb-3">
+                <label for="when" class="form-label">Meets When</label>
+                <input type="text" class="form-control" id="when"/>
+              </div>            
+
+              <div class="mb-3">
+                <label for="where" class="form-label">Meets Where</label>
+                <input type="text" class="form-control" id="where"/>
+              </div>            
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="closeNew" type="button" class="btn btn-secondary">Close</button>
+            <button id="saveNew" type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Join Modal -->
+    <div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="joinModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="joinModal">Join Club</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name"/>
+              </div>            
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Your Email Address</label>
+                <input type="email" class="form-control" id="email"/>
+              </div>            
+
+              <div class="mb-3">
+                <label for="phone" class="form-label">Your Phone Number</label>
+                <input type="phone" class="form-control" id="phone"/>
+              </div>            
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="closeJoin" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="saveJoin" type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     
+  </body>
+</html>
